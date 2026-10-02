@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riques Store | Sua Camisa Esportiva</title>
+  <meta name="description" content="Riques Store - Catálogo oficial de camisas de futebol tailandesas 1.1 padrão original. Varejo e Atacado direto pelo WhatsApp.">
+  
+  <!-- Favicon RS -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23552583'/><text x='50' y='65' font-family='sans-serif' font-size='48' font-weight='900' font-style='italic' fill='%23FDB927' text-anchor='middle'>RS</text></svg>">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              purple: '#552583',
+              purpleLight: '#6B32A1',
+              gold: '#FDB927',
+              goldHover: '#E5A51F',
+              dark: '#08080C',
+              card: '#111116',
+              border: '#1F1F28'
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800;1,900&display=swap');
+    
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 5.5rem;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #08080C;
+      color: #E2E8F0;
+    }
+
+    /* Linha pontilhada do pin de preço */
+    .pin-dashed {
+      border-top: 2px dashed #FDB927;
+    }
+
+    /* Flutuação suave da camisa */
+    @keyframes subtleFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .animate-float {
+      animation: subtleFloat 5s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-brand-gold selection:text-black relative overflow-x-hidden">
+
+  <!-- WATERMARK DE FUNDO: SÍMBOLO DA RIQUES STORE (RS) SUAVE -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden flex items-center justify-center">
+    <!-- Monograma RS gigante com opacidade ultrabaixa (2.5%) -->
+    <span class="text-[44vw] font-black italic tracking-tighter text-brand-purple/[0.035] select-none transform -rotate-12 translate-y-12">
+      RS
+    </span>
+  </div>
+
+  <!-- AVISO TOPO MINIMALISTA -->
+  <div class="relative z-10 bg-black/80 border-b border-white/5 text-[11px] font-bold text-gray-400 py-2 px-4 text-center tracking-wider uppercase">
+    <span>⚡ Envios para todo o Brasil • Padrão Tailandesa 1.1 Original • Atacado a partir de 5 peças</span>
+  </div>
+
+  <!-- HEADER DIRETO & LIMPO -->
+  <header class="sticky top-0 z-50 bg-[#08080C]/90 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between">
+      
+      <!-- LOGO -->
+      <a href="#" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 rounded-xl bg-brand-purple border border-brand-gold/40 flex items-center justify-center font-black italic text-brand-gold text-base tracking-tighter shadow-sm group-hover:scale-105 transition">
+          RS
+        </div>
+        <div>
+          <span class="text-lg font-black uppercase tracking-tight text-white block leading-none">
+            RIQUES <span class="text-brand-gold">STORE</span>
+          </span>
+          <span class="text-[9px] uppercase tracking-widest text-gray-400 font-bold block mt-0.5">Sua Camisa Esportiva</span>
+        </div>
+      </a>
+
+      <!-- LINKS NAVEGAÇÃO -->
+      <nav class="hidden md:flex items-center gap-7 text-xs font-bold uppercase tracking-wider text-gray-300">
+        <a href="#catalogo" class="hover:text-white transition">Catálogo</a>
+        <a href="#precos" class="hover:text-white transition">Preços & Atacado</a>
+        <a href="#pedido" class="hover:text-white transition">Simular Pedido</a>
+        <a href="#duvidas" class="hover:text-white transition">Dúvidas</a>
+      </nav>
+
+      <!-- BOTÃO WHATSAPP -->
+      <a href="#pedido" class="bg-brand-gold hover:bg-yellow-400 text-black text-xs font-black py-2.5 px-4 sm:px-5 rounded-full transition flex items-center gap-2 uppercase tracking-wider">
+        <i data-lucide="message-circle" class="w-4 h-4"></i>
+        <span>Pedir no WhatsApp</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION DIRETA & ELEGANTE -->
+  <section class="relative z-10 pt-10 sm:pt-14 pb-14 px-4 sm:px-6">
+    <div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-8 items-center">
+      
+      <!-- LADO ESQUERDO: DIRETO AO PONTO -->
+      <div class="lg:col-span-7 space-y-5">
+        
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-bold text-gray-300">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          <span>Temporada 2025/2026 • La Liga & Seleções</span>
+        </div>
+
+        <h1 class="text-5xl sm:text-7xl font-black uppercase tracking-tight text-white leading-[0.92]">
+          VISTA <br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-brand-gold to-amber-500">
+            O MANTO.
+          </span>
+        </h1>
+
+        <p class="text-gray-300 text-base max-w-lg font-normal leading-relaxed">
+          Camisas de times e seleções no padrão oficial <strong class="text-white">Tailandesa 1.1 Original</strong>. Escolha os modelos no catálogo, tire o print e feche direto no WhatsApp.
+        </p>
+
+        <!-- BOTÕES DE AÇÃO -->
+        <div class="flex flex-wrap items-center gap-3 pt-2">
+          <a href="#catalogo" class="inline-flex items-center gap-2 bg-brand-gold hover:bg-yellow-400 text-black font-black text-xs uppercase px-7 py-3.5 rounded-full transition tracking-wider">
+            <span>Acessar Catálogo</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+
+          <a href="#precos" class="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/20 text-white font-bold text-xs uppercase px-6 py-3.5 rounded-full transition tracking-wider">
+            <span>Ver Preços & Atacado</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- LADO DIREITO: PRODUTO REAL FLUTUANTE 3D -->
+      <div class="lg:col-span-5 relative flex items-center justify-center">
+        
+        <div class="relative w-full max-w-[370px] animate-float group">
+          
+          <div class="relative rounded-3xl overflow-hidden border border-white/15 bg-gradient-to-b from-[#161622] to-[#0A0A0E] shadow-2xl">
+            
+            <!-- Imagem Oficial Real Madrid 25/26 -->
+            <img 
+              src="camisa.jpg" 
+              alt="Real Madrid Home Kit 25/26" 
+              class="w-full h-[400px] sm:h-[460px] object-cover object-top filter contrast-105 group-hover:scale-105 transition duration-700"
+              onerror="if (!this._retried) { this._retried = 1; this.src='camisa.jpg.jpg'; } else if (this._retried === 1) { this._retried = 2; this.src='Real Madrid 25_26.jpg'; } else if (this._retried === 2) { this._retried = 3; this.src='../../brain/5ebc75a0-da60-47bd-a0f2-2a0f61401512/real_madrid_25_26_hero_1790966677833.jpg'; } else if (this._retried === 3) { this._retried = 4; this.src='file:///C:/Users/Guilherme%20Henriques/Downloads/Real%20Madrid%2025_26.jpg'; }"
+            />
+
+            <!-- Gradiente sutil -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent pointer-events-none"></div>
+
+            <!-- LEGENDA DIRETA CONECTADA AO DRIVE -->
+            <div class="absolute bottom-3 left-3 right-3 p-3 rounded-2xl bg-[#0F0F14]/90 backdrop-blur-md border border-white/10 flex flex-col gap-1 z-10 pointer-events-none">
+              <div class="flex items-center justify-between">
+                <span class="text-[10px] font-black uppercase tracking-wider text-brand-gold">
+                  Manto Oficial 2025/26
+                </span>
+                <span class="text-[9px] font-bold text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-500/30 uppercase">
+                  Tailandesa 1.1
+                </span>
+              </div>
+              
+              <div class="text-sm font-black text-white uppercase tracking-tight">
+                Real Madrid • Home Kit 25/26
+              </div>
+
+              <p class="text-[11px] text-gray-300 font-medium leading-snug pt-1 border-t border-white/10 flex items-center gap-1.5">
+                <i data-lucide="camera" class="w-3.5 h-3.5 text-brand-gold flex-shrink-0"></i>
+                <span>Foto real disponível no <strong>Catálogo • Versão Jogador</strong>.</span>
+              </p>
+            </div>
+
+          </div>
+
+          <!-- PIN DE PREÇO -->
+          <div class="absolute top-1/3 -right-2 sm:-right-4 -translate-y-1/2 z-30 flex items-center">
+            <div class="w-7 pin-dashed hidden sm:block"></div>
+            
+            <div class="bg-black/95 text-white px-3.5 py-2 rounded-2xl border border-brand-gold shadow-2xl flex flex-col items-center">
+              <span class="text-[9px] font-mono text-gray-400 uppercase">1 un. Varejo</span>
+              <div class="text-xl font-black text-brand-gold leading-none my-0.5">
+                R$ 130
+              </div>
+              <span class="text-[8px] font-bold text-emerald-400 uppercase">
+                Atacado: R$ 108
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CATÁLOGO -->
+  <section id="catalogo" class="scroll-mt-20 py-14 px-4 sm:px-6 bg-[#0B0B10] border-y border-white/5 relative z-10">
+    <div class="max-w-5xl mx-auto">
+      
+      <div class="text-center mb-10">
+        <span class="text-brand-gold text-xs font-mono uppercase tracking-widest block mb-1">Acesso Direto</span>
+        <h2 class="text-3xl font-black uppercase text-white tracking-tight">Catálogo</h2>
+        <p class="text-gray-400 text-sm max-w-md mx-auto mt-1">
+          Acesse para ver as fotos reais de cada modelo, escolha os tamanhos e envie o print no WhatsApp.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-5">
+        
+        <!-- CARD TORCEDOR -->
+        <div class="rounded-3xl p-6 bg-[#111116] border border-white/10 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between pb-3 border-b border-white/10 mb-4">
+              <span class="text-xs font-mono text-gray-400 uppercase">Modelagem Tradicional</span>
+              <span class="text-xs font-black text-white bg-white/10 px-2.5 py-0.5 rounded-full">R$ 130</span>
+            </div>
+
+            <h3 class="text-xl font-black uppercase text-white mb-1">Versão Torcedor</h3>
+            <p class="text-gray-300 text-xs mb-4 leading-relaxed">
+              Corte confortável para o dia a dia. Escudos e patrocínios 100% bordados.
+            </p>
+          </div>
+
+          <a href="https://drive.google.com/drive/u/0/mobile/folders/1I_I-3n5odq6VxbJXZoVGoV74jCk9Y2aH?usp=share_link" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/15 text-white font-bold text-xs uppercase py-3.5 px-5 rounded-2xl transition tracking-wider">
+            <i data-lucide="folder-open" class="w-4 h-4 text-brand-gold"></i>
+            <span>Abrir Catálogo Torcedor</span>
+          </a>
+        </div>
+
+        <!-- CARD JOGADOR -->
+        <div class="rounded-3xl p-6 bg-[#111116] border border-brand-gold/30 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between pb-3 border-b border-white/10 mb-4">
+              <span class="text-xs font-mono text-brand-gold uppercase">Authentic Pro (Slim)</span>
+              <span class="text-xs font-black text-black bg-brand-gold px-2.5 py-0.5 rounded-full">R$ 150</span>
+            </div>
+
+            <h3 class="text-xl font-black uppercase text-white mb-1">Versão Jogador</h3>
+            <p class="text-gray-300 text-xs mb-4 leading-relaxed">
+              O mesmo padrão que os atletas usam em campo. Tecido microperfurado e escudos termocolados.
+            </p>
+          </div>
+
+          <a href="https://drive.google.com/drive/folders/1JtpM14AlpCyonENYQIIUTcQFKFbhav_c" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-brand-gold hover:bg-yellow-400 text-black font-black text-xs uppercase py-3.5 px-5 rounded-2xl transition tracking-wider">
+            <i data-lucide="folder-open" class="w-4 h-4"></i>
+            <span>Abrir Catálogo Jogador</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TABELA DE PREÇOS & ATACADO -->
+  <section id="precos" class="scroll-mt-20 py-14 px-4 sm:px-6 max-w-5xl mx-auto w-full relative z-10">
+    <div class="text-center mb-10">
+      <span class="text-brand-gold text-xs font-mono uppercase tracking-widest block mb-1">Tabela Oficial</span>
+      <h2 class="text-3xl font-black uppercase text-white tracking-tight">Preços Varejo & Atacado</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-6">
+      
+      <!-- TORCEDOR -->
+      <div class="rounded-3xl p-5 sm:p-6 bg-[#111116] border border-white/10">
+        <h3 class="text-base font-black uppercase text-white pb-3 border-b border-white/10 mb-3 flex items-center justify-between">
+          <span>Versão Torcedor</span>
+          <span class="text-xs font-normal text-gray-400">Bordada</span>
+        </h3>
+
+        <div class="space-y-2 text-xs">
+          <div class="flex items-center justify-between p-2.5 rounded-xl bg-white/[0.03]">
+            <span class="text-gray-300 font-semibold">1 un. (Varejo)</span>
+            <span class="font-black text-white text-sm">R$ 130</span>
+          </div>
+
+          <div class="flex items-center justify-between p-2.5 rounded-xl bg-white/[0.03]">
+            <div>
+              <span class="text-white font-bold">5 un. (Atacado)</span>
+              <span class="text-[10px] text-brand-gold font-bold ml-1.5">• R$ 108 cada</span>
+            </div>
+            <span class="font-black text-brand-gold text-sm">R$ 540</span>
+          </div>
+
+          <div class="flex items-center justify-between p-2.5 rounded-xl bg-white/[0.03]">
+            <div>
+              <span class="text-white font-bold">10 un. (Atacado)</span>
+              <span class="text-[10px] text-emerald-400 font-bold ml-1.5">• R$ 96 cada</span>
+            </div>
+            <span class="font-black text-emerald-400 text-sm">R$ 960</span>
+          </div>
+
+          <div class="flex items-center justify-between p-2.5 rounded-xl bg-white/[0.03]">
+            <div>
+              <span class="text-white font-bold">20 un. (Super Atacado)</span>
+              <span class="text-[10px] text-gray-400 ml-1.5">• R$ 90 cada</span>
+            </div>
+            <span class="font-black text-white text-sm">R$ 1.800</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- JOGADOR -->
+      <div class="rounded-3xl p-5 sm:p-6 bg-[#111116] border border-white/10">
+        <h3 class="text-base font-black uppercase text-white pb-3 border-b border-white/10 mb-3 flex items-center justify-between">
+          <span>Versão Jogador</span>
+          <span class="text-xs font-normal text-brand-gold">Authentic Pro</span>
+        </h3>
+
+        <div class="space-y-2 text-xs">
+          <div class="flex items-center justify-between p-2.5 rounded-xl bg-white/[0.03]">
+            <span class="text-gray-300 font-semibold">1 un. (Varejo)</span>
+            <span class="font-black text-white text-sm">R$ 150</span>
+          </div>
+
+          <div class="flex items-center justify-between p-2.5 rounded-xl bg-white/[0.03]">
+            <div>
+              <span class="text-white font-bold">5 un. (Atacado)</span>
+              <span class="text-[10px] text-brand-gold font-bold ml-1.5">• R$ 117 cada</span>
+            </div>
+            <span class="font-black text-brand-gold text-sm">R$ 585</span>
+          </div>
+
+          <div class="flex items-center justify-between p-2.5 rounded-xl bg-white/[0.03]">
+            <div>
+              <span class="text-white font-bold">10 un. (Atacado)</span>
+              <span class="text-[10px] text-emerald-400 font-bold ml-1.5">• R$ 107 cada</span>
+            </div>
+            <span class="font-black text-emerald-400 text-sm">R$ 1.070</span>
+          </div>
+
+          <div class="flex items-center justify-between p-2.5 rounded-xl bg-white/[0.03]">
+            <div>
+              <span class="text-white font-bold">20 un. (Super Atacado)</span>
+              <span class="text-[10px] text-gray-400 ml-1.5">• R$ 97 cada</span>
+            </div>
+            <span class="font-black text-white text-sm">R$ 1.940</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- DICA RÁPIDA: COMPRA COM AMIGOS -->
+    <div class="mt-5 p-4 rounded-2xl bg-[#111116] border border-brand-gold/30 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <i data-lucide="users" class="w-5 h-5 text-brand-gold flex-shrink-0"></i>
+        <p class="text-xs text-gray-300">
+          <strong>Dica:</strong> Junte 4 amigos da pelada ou trabalho. Batendo <strong>5 peças no total</strong>, cada camisa cai para <strong class="text-brand-gold">R$ 108</strong> (Torcedor) ou <strong class="text-brand-gold">R$ 117</strong> (Jogador)!
+        </p>
+      </div>
+      <a href="#pedido" class="text-xs font-bold text-brand-gold hover:underline whitespace-nowrap">Simular →</a>
+    </div>
+  </section>
+
+  <!-- CALCULADORA / SIMULADOR DE PEDIDO WHATSAPP -->
+  <section id="pedido" class="scroll-mt-20 py-14 px-4 sm:px-6 bg-[#0B0B10] border-t border-white/5 relative z-10">
+    <div class="max-w-xl mx-auto">
+      
+      <div class="text-center mb-6">
+        <h2 class="text-2xl font-black uppercase text-white tracking-tight">Simule & Envie seu Pedido</h2>
+        <p class="text-gray-400 text-xs mt-1">A mensagem já abre digitada no seu WhatsApp com os valores calculados.</p>
+      </div>
+
+      <div class="rounded-3xl p-6 bg-[#111116] border border-white/10 shadow-xl">
+        <form id="orderForm" onsubmit="event.preventDefault(); sendToWhatsApp();" class="space-y-4">
+          
+          <!-- Escolha Versão -->
+          <div>
+            <label class="block text-xs font-mono uppercase text-gray-400 mb-1.5">1. Versão</label>
+            <div class="grid grid-cols-2 gap-2.5">
+              <label class="cursor-pointer">
+                <input type="radio" name="jerseyType" value="Torcedor" class="peer sr-only" checked onchange="updateTotal()">
+                <div class="p-3 rounded-xl border border-white/10 bg-black/40 peer-checked:border-brand-gold peer-checked:bg-brand-gold/10 peer-checked:text-brand-gold transition text-center font-bold text-xs uppercase tracking-wider text-gray-300">
+                  Torcedor (Bordada)
+                </div>
+              </label>
+
+              <label class="cursor-pointer">
+                <input type="radio" name="jerseyType" value="Jogador" class="peer sr-only" onchange="updateTotal()">
+                <div class="p-3 rounded-xl border border-white/10 bg-black/40 peer-checked:border-brand-gold peer-checked:bg-brand-gold/10 peer-checked:text-brand-gold transition text-center font-bold text-xs uppercase tracking-wider text-gray-300">
+                  Jogador (Authentic Pro)
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Quantidade -->
+          <div>
+            <label class="block text-xs font-mono uppercase text-gray-400 mb-1.5">2. Quantidade</label>
+            <select id="quantitySelect" class="w-full bg-black/50 border border-white/15 rounded-xl px-3.5 py-3 text-white text-xs font-semibold focus:outline-none focus:border-brand-gold transition" onchange="updateTotal()">
+              <option value="1">1 unidade (Varejo)</option>
+              <option value="5">5 unidades (Combo Atacado)</option>
+              <option value="10">10 unidades (Atacado Especial)</option>
+              <option value="20">20 unidades (Super Atacado)</option>
+            </select>
+          </div>
+
+          <!-- Modelos e Tamanhos -->
+          <div>
+            <label class="block text-xs font-mono uppercase text-gray-400 mb-1.5">
+              3. Modelos & Tamanhos (P, M, G, GG, XGG)
+            </label>
+            <textarea id="modelsInput" rows="2" placeholder="Ex: Real Madrid 25/26 (M), Flamengo I (G)..." class="w-full bg-black/50 border border-white/15 rounded-xl p-3 text-white text-xs placeholder-gray-500 focus:outline-none focus:border-brand-gold transition"></textarea>
+          </div>
+
+          <!-- Box Total -->
+          <div class="p-3.5 rounded-xl bg-black/60 border border-white/10 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] font-mono text-gray-400 block uppercase">Total Estimado</span>
+              <div class="text-2xl font-black text-brand-gold" id="totalPrice">R$ 130</div>
+            </div>
+            <div class="text-right">
+              <span class="text-xs font-bold text-white block" id="unitPrice">R$ 130 cada</span>
+              <span class="text-[9px] text-emerald-400 font-bold uppercase">Frete sob consulta</span>
+            </div>
+          </div>
+
+          <!-- Botão WhatsApp -->
+          <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-400 text-black font-black py-3.5 px-5 rounded-xl transition flex items-center justify-center gap-2 text-xs uppercase tracking-wider">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>Pedir no WhatsApp</span>
+          </button>
+
+          <p class="text-[11px] text-gray-400 text-center pt-0.5">
+            Você está mais perto de ter a melhor experiência em camisas esportivas.
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ / DÚVIDAS -->
+  <section id="duvidas" class="scroll-mt-20 py-10 px-4 sm:px-6 max-w-2xl mx-auto w-full relative z-10">
+    <div class="text-center mb-6">
+      <h2 class="text-xl font-black uppercase text-white">Dúvidas Rápidas</h2>
+    </div>
+
+    <div class="space-y-2.5">
+      <details class="p-3.5 rounded-xl bg-[#111116] border border-white/10 cursor-pointer group text-xs">
+        <summary class="font-bold text-white flex items-center justify-between list-none">
+          <span>O que é a qualidade Tailandesa 1.1?</span>
+          <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-gray-400 group-open:rotate-180 transition"></i>
+        </summary>
+        <p class="text-gray-400 mt-2 leading-relaxed">
+          Padrão mais perfeito do mercado: tecidos respiráveis oficiais, etiquetas térmicas, código de barras e bordados idênticos aos das lojas oficiais.
+        </p>
+      </details>
+
+      <details class="p-3.5 rounded-xl bg-[#111116] border border-white/10 cursor-pointer group text-xs">
+        <summary class="font-bold text-white flex items-center justify-between list-none">
+          <span>Como funciona a consulta de frete?</span>
+          <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-gray-400 group-open:rotate-180 transition"></i>
+        </summary>
+        <p class="text-gray-400 mt-2 leading-relaxed">
+          O frete é cotado pelo WhatsApp de acordo com o seu CEP para achar a opção mais barata e rápida (Correios ou transportadora com rastreio).
+        </p>
+      </details>
+
+      <details class="p-3.5 rounded-xl bg-[#111116] border border-white/10 cursor-pointer group text-xs">
+        <summary class="font-bold text-white flex items-center justify-between list-none">
+          <span>Posso mesclar times e tamanhos no atacado?</span>
+          <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-gray-400 group-open:rotate-180 transition"></i>
+        </summary>
+        <p class="text-gray-400 mt-2 leading-relaxed">
+          Sim! A partir de 5 peças você pode escolher qualquer combinação de clubes, seleções e tamanhos disponíveis no catálogo.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="mt-auto py-6 border-t border-white/10 text-center text-xs text-gray-500 bg-black relative z-10">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <span class="font-black uppercase text-white">RIQUES <span class="text-brand-gold">STORE</span></span>
+        <span>• Mantos Padrão 1.1 Original</span>
+      </div>
+      <div>
+        Envios com rastreio para todo o Brasil • Pagamento via Pix e Cartão.
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    const PRICING = {
+      Torcedor: {
+        1: { total: 130, unit: 130 },
+        5: { total: 540, unit: 108 },
+        10: { total: 960, unit: 96 },
+        20: { total: 1800, unit: 90 }
+      },
+      Jogador: {
+        1: { total: 150, unit: 150 },
+        5: { total: 585, unit: 117 },
+        10: { total: 1070, unit: 107 },
+        20: { total: 1940, unit: 97 }
+      }
+    };
+
+    let WHATSAPP_NUMBER = '5571986313403';
+
+    function updateTotal() {
+      const selectedType = document.querySelector('input[name="jerseyType"]:checked').value;
+      const selectedQty = document.getElementById('quantitySelect').value;
+      const priceData = PRICING[selectedType][selectedQty];
+
+      document.getElementById('totalPrice').innerText = 'R$ ' + priceData.total.toLocaleString('pt-BR');
+      document.getElementById('unitPrice').innerText = 'R$ ' + priceData.unit.toLocaleString('pt-BR') + ' cada';
+    }
+
+    function sendToWhatsApp() {
+      const selectedType = document.querySelector('input[name="jerseyType"]:checked').value;
+      const selectedQty = document.getElementById('quantitySelect').value;
+      const models = document.getElementById('modelsInput').value.trim();
+      const priceData = PRICING[selectedType][selectedQty];
+
+      let message = `👋 *Olá, Riques Store! Vim pelo site e montei meu pedido:*\n\n`;
+      message += `📋 *RESUMO DO PEDIDO:*\n`;
+      message += `• *Versão:* ${selectedType}\n`;
+      message += `• *Quantidade:* ${selectedQty} un (R$ ${priceData.unit} cada)\n`;
+      message += `• *Total Estimado:* R$ ${priceData.total}\n\n`;
+      
+      if (models) {
+        message += `👕 *Modelos & Tamanhos escolhidos:*\n${models}\n\n`;
+      } else {
+        message += `📸 *Vou enviar os prints dos modelos escolhidos no catálogo!*\n\n`;
+      }
+      message += `📍 *Gostaria de consultar o frete para o meu CEP, por favor!*`;
+
+      const encodedMessage = encodeURIComponent(message);
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+      window.open(url, '_blank');
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+      updateTotal();
+    });
+  </script>
+</body>
+</html>
